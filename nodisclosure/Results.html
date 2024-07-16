@@ -1,0 +1,25 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}Results{{ endblock }}
+
+{{ block content }}
+
+<p>
+
+    {{ if player.role == C.ODD_ROLE }}
+    <!-- only show the random number if the odd player choose 2b-->
+    {{if group.option2aor2b == "option2b"}}
+    You chose option 2b.
+    The random number is {{group.random_number}}.
+    {{ endif }}
+    Your payoff is {{player.payoff}}.
+   {{ endif }}
+
+    {{ if player.role == C.EVEN_ROLE }}
+       Your payoff is {{player.payoff}}.
+   {{ endif }}
+
+    
+    {{ next_button }}
+</p>
+
+{{ endblock }}

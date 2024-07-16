@@ -1,0 +1,34 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}Results{{ endblock }}
+
+{{ block content }}
+
+<p>
+    {{ if player.is_winner }}
+        You won the auction!
+    {{ else }}
+        You did not win the auction.
+    {{ endif }}
+</p>
+
+<table class="table" style="width:400px">
+
+    <tr>
+        <th>Your bid</th>
+        <th>Winning bid</th>
+        <th>Actual value</th>
+        <th>Your payoff</th>
+    </tr>
+
+<tr>
+    <td>{{ player.bid_amount }}</td>
+    <td>{{ group.highest_bid }}</td>
+    <td>{{ player.item_value }}</td>
+    <td>{{ player.payoff }}</td>
+</tr>
+
+</table>
+
+{{ next_button }}
+
+{{ endblock }}

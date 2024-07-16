@@ -1,0 +1,12 @@
+{{ extends 'global/Page.html' }}
+{{ block title }}Introduction{{ endblock }}
+
+{{ block content }}
+
+<!-- we can use participant id as registration number-->
+<p>Your registration ( random ) number is: <span style="font-size: 2em;"> {{ participant.id_in_session }}</span></p>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQStwXq6Oe7uiBzsr5_XG1UoZe_jULjNbd29JDnjGIZdPy7ZR8Pn46bZ4rDno2_i5_SpPbcPlMVuwqp/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+{{ next_button }}
+
+{{ endblock }}
